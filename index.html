@@ -1431,6 +1431,51 @@ a {
     display: block;
 }
 
+/* WhatsApp Integration Styles */
+.form-divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.form-divider::before,
+.form-divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.form-divider span {
+    padding: 0 15px;
+}
+
+.whatsapp-btn-container {
+    text-align: center;
+    width: 100%;
+}
+
+.whatsapp-btn-container a {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-btn-container a:hover {
+    transform: translateY(-3px);
+    filter: drop-shadow(0 4px 12px rgba(37, 211, 102, 0.3)); /* WhatsApp green shadow glow */
+}
+
+.whatsapp-btn-container img {
+    height: 48px; /* Standardizes the height of the SVG */
+    width: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+
 </style>
 </head>
 <body>
@@ -1784,6 +1829,15 @@ a {
                         <textarea id="message" name="message" rows="3" placeholder="I'm interested in..." required></textarea>
                     </div>
                     <button type="submit" class="cta-button">Submit Enquiry</button>
+                    <!-- NEW: WhatsApp Integration -->
+                    <div class="form-divider">
+                        <span>OR</span>
+                    </div>
+                    <div class="whatsapp-btn-container">
+                        <a aria-label="Chat on WhatsApp" href="https://wa.me/918056999449" target="_blank"> 
+                            <img alt="Chat on WhatsApp" src="WhatsAppButtonGreenSmall.svg" />
+                        </a>
+                    </div>
                     <div id="form-success" class="form-success">
                         Thank you! We'll contact you soon.
                     </div>
