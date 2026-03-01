@@ -249,7 +249,7 @@ a {
     align-items: center;
     justify-content: center;
     position: relative;
-    background: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.6) 100%),
+    background: linear-gradient(180deg, rgba(13, 31, 26, 0.85) 0%, rgba(13, 31, 26, 0.7) 100%),
                 url('GreenfieldAero_HeroBG.png') center/cover no-repeat;
     overflow: hidden;
 }
@@ -280,127 +280,10 @@ a {
     text-align: center;
     z-index: 2;
     padding: 0 24px;
-    max-width: 900px;
+    max-width: 1000px;
+    padding-top: 60px;
 }
 
-.hero-logo {
-    display: inline-block;
-    background: rgba(201, 169, 98, 0.2);
-    border: 2px solid var(--secondary);
-    padding: 12px 32px;
-    border-radius: 8px;
-    margin-bottom: 32px;
-    animation: fadeInDown 0.8s ease;
-}
-
-.hero-logo-text {
-    font-family: 'Playfair Display', serif;
-    font-size: 32px;
-    font-weight: 700;
-    color: var(--white);
-    letter-spacing: 2px;
-}
-
-.hero h1 {
-    font-size: 72px;
-    color: var(--white);
-    margin-bottom: 16px;
-    animation: fadeInUp 0.8s ease forwards;
-    font-weight: 700;
-    letter-spacing: 3px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-}
-
-.hero-title-3d {
-    font-size: 52px;
-    color: var(--secondary);
-    margin-bottom: 8px;
-    animation: fadeInUp 0.8s ease forwards;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    background: linear-gradient(180deg, #f0d78c 0%, #c9a962 50%, #a08040 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    filter: drop-shadow(3px 3px 6px rgba(0,0,0,0.4));
-    transform: perspective(500px) rotateX(5deg);
-    display: inline-block;
-}
-
-.hero-subtitle-3d {
-    font-size: 36px;
-    color: var(--white);
-    margin-bottom: 24px;
-    animation: fadeInUp 0.8s ease forwards;
-    animation-delay: 0.15s;
-    opacity: 0;
-    font-weight: 600;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    text-shadow: 
-        0 1px 0 #ccc,
-        0 2px 0 #bbb,
-        0 3px 0 #aaa,
-        0 4px 0 #999,
-        0 5px 0 #888,
-        0 6px 1px rgba(0,0,0,0.1),
-        0 0 5px rgba(0,0,0,0.1),
-        0 1px 3px rgba(0,0,0,0.3),
-        0 3px 5px rgba(0,0,0,0.2),
-        0 5px 10px rgba(0,0,0,0.25),
-        0 10px 10px rgba(0,0,0,0.2),
-        0 20px 20px rgba(0,0,0,0.15);
-    transform: perspective(500px) rotateX(3deg);
-}
-
-.hero-tagline {
-    font-size: 22px;
-    color: var(--white);
-    margin-bottom: 8px;
-    font-weight: 400;
-    animation: fadeInUp 0.8s ease forwards;
-    animation-delay: 0.2s;
-    opacity: 0;
-}
-
-.hero-location {
-    font-size: 24px;
-    color: var(--secondary);
-    margin-bottom: 32px;
-    font-weight: 600;
-    letter-spacing: 2px;
-    animation: fadeInUp 0.8s ease forwards;
-    animation-delay: 0.3s;
-    opacity: 0;
-}
-
-.hero-why-guindy {
-    background: rgba(0, 0, 0, 0.5);
-    border: 1px solid rgba(201, 169, 98, 0.4);
-    border-radius: 12px;
-    padding: 24px 32px;
-    margin-bottom: 32px;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-    animation: fadeInUp 0.8s ease forwards;
-    animation-delay: 0.4s;
-    opacity: 0;
-}
-
-.hero-why-guindy h3 {
-    font-size: 20px;
-    color: var(--secondary);
-    margin-bottom: 16px;
-    font-family: 'DM Sans', sans-serif;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    text-align: center;
-}
-
-/* --- NEW HERO BADGE STYLE --- */
 .hero-approval-badge {
     position: absolute;
     top: 120px;
@@ -438,133 +321,6 @@ a {
 @keyframes badgeFloat {
     0%, 100% { transform: rotate(5deg) translateY(0); }
     50% { transform: rotate(5deg) translateY(-10px); }
-}
-
-@media (max-width: 900px) {
-    .hero-approval-badge {
-        position: relative;
-        top: auto;
-        right: auto;
-        transform: rotate(0);
-        margin: 20px auto;
-        display: inline-block;
-        animation: none;
-    }
-}
-
-.why-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.why-list li {
-    font-size: 14px;
-    color: var(--white);
-    margin-bottom: 10px;
-    padding-left: 30px;
-    position: relative;
-    line-height: 1.5;
-}
-
-.why-list li:last-child {
-    margin-bottom: 0;
-}
-
-.why-list .num {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 22px;
-    height: 22px;
-    background: var(--secondary);
-    color: var(--primary);
-    border-radius: 50%;
-    font-size: 12px;
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.hero-description {
-    font-size: 16px;
-    color: var(--accent);
-    margin-bottom: 32px;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    animation: fadeInUp 0.8s ease forwards;
-    animation-delay: 0.3s;
-    opacity: 0;
-}
-
-.hero-features {
-    display: flex;
-    justify-content: center;
-    gap: 16px;
-    flex-wrap: wrap;
-    margin-bottom: 40px;
-    animation: fadeInUp 0.8s ease forwards;
-    animation-delay: 0.4s;
-    opacity: 0;
-}
-
-.feature-badge {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 14px 24px;
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(201, 169, 98, 0.5);
-    border-radius: 6px;
-    color: var(--white);
-    font-size: 14px;
-    font-weight: 500;
-    transition: var(--transition);
-}
-
-.feature-badge:hover {
-    background: rgba(201, 169, 98, 0.2);
-    transform: translateY(-3px);
-}
-
-.feature-badge .icon {
-    font-size: 18px;
-}
-
-.cta-button {
-    display: inline-block;
-    padding: 16px 40px;
-    background: var(--secondary);
-    color: var(--primary);
-    border-radius: 6px;
-    font-weight: 600;
-    font-size: 16px;
-    transition: var(--transition);
-    border: none;
-    cursor: pointer;
-    animation: fadeInUp 0.8s ease forwards;
-    animation-delay: 0.5s;
-    opacity: 0;
-}
-
-.cta-button:hover {
-    background: #d4b56a;
-    transform: translateY(-3px);
-    box-shadow: 0 8px 24px rgba(201, 169, 98, 0.4);
-}
-
-/* --- NEW HERO STYLES (PUNCHY & AGGRESSIVE) --- */
-.hero {
-    /* darkened overlay for better text contrast */
-    background: linear-gradient(180deg, rgba(13, 31, 26, 0.85) 0%, rgba(13, 31, 26, 0.7) 100%),
-                url('GreenfieldAero_HeroBG.png') center/cover no-repeat;
-}
-
-.hero-content {
-    max-width: 1000px;
-    padding-top: 60px;
 }
 
 .hero-super-title {
@@ -612,17 +368,39 @@ a {
     animation: pulse 2s infinite;
 }
 
+@keyframes pulse {
+    0% { transform: skew(-10deg) scale(1); }
+    50% { transform: skew(-10deg) scale(1.05); }
+    100% { transform: skew(-10deg) scale(1); }
+}
+
 .hero-why-guindy {
     background: rgba(13, 31, 26, 0.8);
     backdrop-filter: blur(10px);
     border: 2px solid var(--secondary);
     box-shadow: 0 10px 50px rgba(0,0,0,0.5);
     padding: 30px;
-    border-radius: 0; /* Sharper look */
+    border-radius: 0;
     max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-why-guindy h3 {
+    font-size: 20px;
+    color: var(--secondary);
+    margin-bottom: 16px;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
 }
 
 .why-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 15px;
@@ -632,73 +410,86 @@ a {
 .why-list li {
     font-size: 15px;
     font-weight: 500;
+    color: var(--white);
     border-bottom: 1px solid rgba(255,255,255,0.1);
     padding-bottom: 8px;
+    padding-left: 30px;
+    position: relative;
+    line-height: 1.5;
 }
 
-@keyframes pulse {
-    0% { transform: skew(-10deg) scale(1); }
-    50% { transform: skew(-10deg) scale(1.05); }
-    100% { transform: skew(-10deg) scale(1); }
+.why-list li:last-child {
+    margin-bottom: 0;
+}
+
+.why-list .num {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 22px;
+    height: 22px;
+    background: var(--secondary);
+    color: var(--primary);
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 16px 40px;
+    background: var(--secondary);
+    color: var(--primary);
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 16px;
+    transition: var(--transition);
+    border: none;
+    cursor: pointer;
+    animation: fadeInUp 0.8s ease forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
+}
+
+.cta-button:hover {
+    background: #d4b56a;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(201, 169, 98, 0.4);
+}
+
+@media (max-width: 900px) {
+    .hero-approval-badge {
+        position: relative;
+        top: auto;
+        right: auto;
+        transform: rotate(0);
+        margin: 20px auto;
+        display: inline-block;
+        animation: none;
+    }
 }
 
 @media (max-width: 768px) {
     .hero-massive-text { font-size: 50px; }
     .hero-massive-text span { font-size: 36px; }
     .why-list { grid-template-columns: 1fr; }
-}
-
-
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 28px;
-        letter-spacing: 1px;
-    }
-
-    .hero-title-3d {
-        font-size: 28px;
-    }
-
-    .hero-subtitle-3d {
-        font-size: 20px;
-    }
-
     .hero-why-guindy {
         padding: 16px 20px;
     }
-
     .hero-why-guindy h3 {
         font-size: 16px;
     }
-
     .why-list li {
         font-size: 12px;
         padding-left: 26px;
     }
-
     .why-list .num {
         width: 18px;
         height: 18px;
         font-size: 10px;
-    }
-
-    .hero-tagline {
-        font-size: 16px;
-    }
-
-    .hero-location {
-        font-size: 18px;
-    }
-
-    .hero-features {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .feature-badge {
-        width: 100%;
-        max-width: 280px;
-        justify-content: center;
     }
 }
 
