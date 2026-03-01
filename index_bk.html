@@ -40,8 +40,6 @@ body {
     background-color: var(--light);
     line-height: 1.6;
     overflow-x: hidden;
-    width: 100%;
-    max-width: 100vw;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -59,7 +57,6 @@ a {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 24px;
-    width: 100%;
 }
 
 .section {
@@ -127,7 +124,6 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
 }
 
 .nav-logo {
@@ -286,7 +282,6 @@ a {
     padding: 0 24px;
     max-width: 1000px;
     padding-top: 60px;
-    width: 100%;
 }
 
 .hero-approval-badge {
@@ -465,24 +460,15 @@ a {
     box-shadow: 0 8px 24px rgba(201, 169, 98, 0.4);
 }
 
-/* HERO RESPONSIVENESS (VITAL FIXES) */
 @media (max-width: 900px) {
-    .hero {
-        flex-direction: column;
-        padding-top: 100px;
-        padding-bottom: 60px;
-    }
     .hero-approval-badge {
         position: relative;
         top: auto;
         right: auto;
         transform: rotate(0);
-        margin: 0 auto 30px auto; /* Centered with bottom space */
+        margin: 20px auto;
         display: inline-block;
         animation: none;
-    }
-    .hero-content {
-        padding-top: 0;
     }
 }
 
@@ -497,30 +483,14 @@ a {
         font-size: 16px;
     }
     .why-list li {
-        font-size: 13px;
-        padding-left: 28px;
-        margin-bottom: 8px;
+        font-size: 12px;
+        padding-left: 26px;
     }
     .why-list .num {
-        width: 20px;
-        height: 20px;
+        width: 18px;
+        height: 18px;
         font-size: 10px;
     }
-    .hero-tag-box {
-        font-size: 14px;
-        padding: 8px 16px;
-        margin-bottom: 24px;
-        letter-spacing: 1px;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-super-title { font-size: 16px; letter-spacing: 2px; }
-    .hero-massive-text { font-size: 40px; }
-    .hero-massive-text span { font-size: 28px; }
-    .hero-approval-badge { padding: 10px 15px; margin-bottom: 20px; }
-    .hero-approval-badge span { font-size: 18px; }
-    .cta-button { padding: 14px 24px; font-size: 14px; width: 100%; text-align: center; }
 }
 
 @keyframes fadeInUp {
@@ -545,16 +515,68 @@ a {
     }
 }
 
+/* Features Section */
+.features-section {
+    background: var(--primary);
+    padding: 40px 0;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.feature-item {
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    border: 1px solid rgba(201, 169, 98, 0.3);
+    transition: var(--transition);
+}
+
+.feature-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--secondary);
+}
+
+.feature-icon {
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.feature-item h3 {
+    font-size: 16px;
+    color: var(--white);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* Highlights Section */
 .highlights-section {
     background: var(--white);
     padding: 60px 0;
 }
 
-/* FIXED HIGHLIGHTS GRID */
 .highlights-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 24px;
 }
 
@@ -589,12 +611,6 @@ a {
 .highlight-card p {
     font-size: 13px;
     color: var(--text-secondary);
-}
-
-@media (max-width: 1024px) {
-    .highlights-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
 }
 
 @media (max-width: 900px) {
@@ -660,19 +676,116 @@ a {
     font-weight: bold;
 }
 
+.about-image {
+    position: relative;
+}
+
+.about-image-main {
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: var(--shadow-lg);
+}
+
+.about-image-badge {
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    background: var(--primary);
+    color: var(--white);
+    padding: 20px 24px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: var(--shadow-lg);
+}
+
+.about-image-badge .number {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--secondary);
+    font-family: 'Playfair Display', serif;
+}
+
+.about-image-badge .label {
+    font-size: 14px;
+}
+
 @media (max-width: 900px) {
     .about-content {
         grid-template-columns: 1fr;
         gap: 40px;
     }
 
-    .layout-image-container {
+    .about-image {
         order: -1;
     }
 }
 
-@media (max-width: 500px) {
-    .about-features {
+/* Pricing Section */
+.pricing-section {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.pricing-section .section-title {
+    color: var(--white);
+}
+
+.pricing-section .section-subtitle {
+    color: var(--accent);
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.pricing-card {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(201, 169, 98, 0.3);
+    border-radius: 16px;
+    padding: 32px 24px;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.pricing-card:hover {
+    transform: translateY(-8px);
+    background: rgba(255, 255, 255, 0.15);
+    border-color: var(--secondary);
+}
+
+.pricing-icon {
+    font-size: 48px;
+    margin-bottom: 16px;
+}
+
+.pricing-card h3 {
+    font-size: 24px;
+    margin-bottom: 8px;
+    color: var(--white);
+}
+
+.pricing-amount {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--secondary);
+    margin-bottom: 8px;
+}
+
+.pricing-amount span {
+    font-size: 16px;
+    color: var(--accent);
+}
+
+.pricing-note {
+    font-size: 13px;
+    color: var(--accent);
+    margin-top: 12px;
+}
+
+@media (max-width: 768px) {
+    .pricing-grid {
         grid-template-columns: 1fr;
     }
 }
@@ -929,16 +1042,6 @@ a {
     color: var(--primary);
 }
 
-@media (max-width: 480px) {
-    .cta-buttons {
-        flex-direction: column;
-        width: 100%;
-    }
-    .cta-primary, .cta-secondary {
-        width: 100%;
-    }
-}
-
 /* Contact Section */
 .contact-section {
     background: var(--white);
@@ -1140,7 +1243,6 @@ a {
     .footer-content {
         grid-template-columns: 1fr;
         text-align: center;
-        gap: 32px;
     }
 }
 
@@ -1171,7 +1273,6 @@ a {
 .modal-content {
     position: relative;
     background: var(--light);
-    width: 90%; /* added for mobile view */
     max-width: 500px;
     margin: 100px auto;
     border-radius: 16px;
@@ -1276,31 +1377,6 @@ a {
     transform: scale(1.03);
 }
 
-/* FIXED: Missing overlay CSS added back in */
-.layout-overlay {
-    position: absolute;
-    bottom: 15px;
-    right: 15px;
-    background: rgba(13, 31, 26, 0.8);
-    color: var(--secondary);
-    padding: 8px 16px;
-    border-radius: 20px;
-    font-size: 14px;
-    font-weight: 600;
-    pointer-events: none;
-    backdrop-filter: blur(5px);
-    border: 1px solid rgba(201, 169, 98, 0.3);
-}
-
-@media (max-width: 480px) {
-    .layout-overlay {
-        padding: 6px 12px;
-        font-size: 12px;
-        bottom: 10px;
-        right: 10px;
-    }
-}
-
 .layout-caption {
     margin-top: 15px;
     color: var(--text-secondary);
@@ -1364,23 +1440,15 @@ a {
     cursor: pointer;
 }
 
-@media only screen and (max-width: 768px) {
-    .close-image-modal {
-        top: 10px;
-        right: 20px;
-        font-size: 30px;
-    }
+@keyframes zoomIn {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
 }
 
 @media only screen and (max-width: 700px) {
     .modal-content-img {
-        width: 95%; /* Shrunk slightly to avoid touching screen edges */
+        width: 100%;
     }
-}
-
-@keyframes zoomIn {
-    from {transform:scale(0)} 
-    to {transform:scale(1)}
 }
 
 /* --- KEY PLAN MAP STYLES --- */
@@ -1496,14 +1564,14 @@ a {
         </div>
     </section>
 
+
     <!-- HIGHLIGHTS SECTION -->
     <section class="highlights-section">
         <div class="container">
             <div class="section-title">Project Highlights</div>
             <div class="section-subtitle">Premium features for a hassle-free lifestyle</div>
             
-            <!-- FIXED: Removed Hardcoded grid columns inline-style which broke mobile widths completely -->
-            <div class="highlights-grid">
+            <div class="highlights-grid" style="grid-template-columns: repeat(5, 1fr);">
                 <div class="highlight-card">
                     <div class="highlight-icon">🏰</div>
                     <h3>Gated Community</h3>
@@ -1734,7 +1802,7 @@ a {
                 <div class="contact-info fade-in">
                     <h3>Green Field Aero City</h3>
                     <h4>by Urban Prime Estates</h4>
-                    <br> <!-- Fixed typo from invalid <br></br> tag -->
+                    <br></br>
                     <p>Your trusted partner in premium property investments. Contact us today to know more about available plots and investment opportunities.</p>
                     
                     <div class="contact-details">
@@ -1956,20 +2024,8 @@ a {
         if(layoutWrapper && layoutImg) {
             layoutWrapper.addEventListener('click', function() {
                 imageModal.style.display = "block";
-                modalImg.src = layoutImg.src; 
+                modalImg.src = layoutImg.src; // Takes the src from your static image
                 captionText.innerHTML = layoutImg.alt;
-            });
-        }
-
-        // Add support for zooming the Key Plan image map as well
-        const keyPlanWrapper = document.querySelector('.zoom-trigger');
-        const keyPlanImg = document.querySelector('.key-plan-img');
-        
-        if(keyPlanWrapper && keyPlanImg) {
-            keyPlanWrapper.addEventListener('click', function() {
-                imageModal.style.display = "block";
-                modalImg.src = keyPlanImg.src; 
-                captionText.innerHTML = keyPlanImg.alt;
             });
         }
 
