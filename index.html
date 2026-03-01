@@ -1632,15 +1632,17 @@ a {
             <div class="location-content">
                 <!-- Map Side -->
                 <div class="location-map fade-in">
+                    <!-- Embedded map in Satellite/Hybrid view -->
                     <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.8!2d79.8752245!3d12.9560064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52edbd210917e5:0x293c1c6ff8914760!2sGreenfield+Aero+City!5e0!3m2!1sen!2sin!4v1700000000000" 
+                        src="https://maps.google.com/maps?q=12.9560064,79.8752245&t=h&z=16&ie=UTF8&iwloc=&output=embed" 
                         allowfullscreen="" 
                         loading="lazy" 
                         referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
                     <div class="map-action">
-                        <a href="https://maps.google.com/?q=Greenfield+Aero+City" target="_blank" class="btn-directions">
-                            📍 Get Directions
+                        <!-- Opens the exact coordinates in the Maps App, without starting navigation -->
+                        <a href="https://www.google.com/maps/search/?api=1&query=12.9560064,79.8752245" target="_blank" class="btn-directions">
+                            📍 View on Google Maps
                         </a>
                     </div>
                 </div>
